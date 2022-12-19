@@ -6,15 +6,8 @@ public class Shooter : MonoBehaviour
 {
     
     public GameObject bullet;
-
     public Transform bulletStartPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A) == true)
@@ -23,12 +16,11 @@ public class Shooter : MonoBehaviour
             transform.position += Vector3.left * 5;
         }
     }
-
+    
+    //Called from animation
     public void Fire()
     {
         GameObject spawnedObje = Instantiate(bullet);
         spawnedObje.transform.position = bulletStartPosition.position;
     }
-
-   
 }

@@ -11,16 +11,9 @@ public class Enemy : MonoBehaviour
 
     public Enemy[] childs;
     
-    // Start is called before the first frame update
     void Start()
     {
         Animator.speed = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)
